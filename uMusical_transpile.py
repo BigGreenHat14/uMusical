@@ -96,6 +96,6 @@ if __name__ == "__main__":
         program_commands = process_multi_track_midi(midi_path)
         
         if program_commands:
-            with open("output_mcu.umusic", "w") as f:
+            with open(filedialog.asksaveasfilename(filetypes=["uMusic Files", ["*.umusic"]]), "w") as f:
                 f.write("\n".join(program_commands))
             print("Successfully compiled interleaved tracks into output_mcu.umusic!")
