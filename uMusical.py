@@ -44,7 +44,7 @@ argparser.add_argument("--baudrate", "-r", help="Baudrate for serial communicati
 argparser.add_argument("--mode", "-m", help="Mode value for music file", default=0, type=int)
 argparser.add_argument("--delay", "-d", help="Delay between frequency changes in milliseconds (may make serial smoother but playback slower)", default=None, type=int) # Micropython is slow
 argparser.add_argument("--debug", "-b", help="Enable debug output", action="store_true")
-argparser.add_argument("--fast", help="Speaker count, enables you to run without requiring reset (must already me in receive mode, duck on dispaly)", default=None, type=int)
+argparser.add_argument("--fast", help="Speaker count, enables you to run without requiring reset (must already be in receive mode, duck on dispaly)", default=None, type=int)
 
 args = argparser.parse_args()
 
