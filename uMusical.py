@@ -39,7 +39,7 @@ help - Displays this message again
 
 argparser = ArgumentParser(description="uMusical Conductor")
 argparser.add_argument("--file", "-f", help="Path to the music file to play (*.umusic, use transpiler to convert midi)", required=False)
-argparser.add_argument("--port", "-p", help="Serial port to use (of any MCU, for midi output, use midi#, where # is the midi port number, e.g. COM3)", required=True)
+argparser.add_argument("--port", "-p", help="Serial port to use (of any MCU, for midi output, use midi#, where # is the midi port number, e.g. COM3, midi0)", required=True)
 argparser.add_argument("--baudrate", "-r", help="Baudrate for serial communication (ignored for MIDI output)", default=115200, type=int)
 argparser.add_argument("--mode", "-m", help="Mode value for music file", default=0, type=int)
 argparser.add_argument("--delay", "-d", help="Delay between frequency changes in milliseconds (may make serial smoother but playback slower)", default=None, type=int) # Micropython is slow
